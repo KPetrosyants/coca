@@ -40,6 +40,7 @@
     flex-wrap: wrap;
 
     @include mobile {
+      display: none;
       gap: 10px;
     }
   }
@@ -50,5 +51,19 @@
     width: 160px;
     height: 90px;
     background-color: #fff;
+  }
+}
+.partners-swiper.swiper {
+  display: none;
+  max-width: 100%;
+  overflow: hidden;
+  @include mobile {
+    display: block;
+  }
+
+  .swiper-slide {
+    // width: 160px;
+    // height: 90px;
+    @include flex-all-center;
   }
 }
