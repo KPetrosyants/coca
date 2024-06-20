@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 // import SwiperCore, { Autoplay } from 'swiper';
-export const partnersSlider = () => {
+export const UsePartnersSlider = () => {
   new Swiper('.partners-swiper', {
     modules: [Autoplay],
     autoplay: {
