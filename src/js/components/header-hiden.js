@@ -9,7 +9,6 @@ export const useHeaderHiden = () => {
   const containHide = () => header.dataset.headerHiden;
 
   window.addEventListener('scroll', () => {
-    console.log(scrollPosition());
     if (
       scrollPosition() > lastScroll &&
       containHide() &&
