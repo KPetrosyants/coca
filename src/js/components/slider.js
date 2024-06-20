@@ -24,3 +24,17 @@ export const useInsightSlider = () => {
     },
   });
 };
+
+export const useTestimonialsSlider = () => {
+  new Swiper('.testimonials__slider', {
+    modules: [Navigation],
+    slidesPerView: 'auto',
+    speed: 700,
+    spaceBetween: 22,
+    loop: true,
+    navigation: {
+      prevEl: '.testimonials__btn--prev',
+      nextEl: '.testimonials__btn--next',
+    },
+  });
+};
