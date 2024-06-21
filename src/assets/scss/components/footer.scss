@@ -126,9 +126,12 @@
     }
 
     @include mobile {
-      gap: 40px 60px;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-rows: repeat(4, auto);
+      grid-template-columns: 1fr;
+      gap: 20px;
+      //   flex-wrap: wrap;
+      //   justify-content: center;
     }
 
     @include small-mobile {
@@ -137,17 +140,57 @@
   }
 
   &__item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     &-title {
-      margin-bottom: 24px;
       font-weight: 700;
-      line-height: 150%;
+      line-height: 48px;
+      @include mobile {
+        margin-bottom: 0px;
+        margin-left: 20px;
+      }
     }
 
     @include mobile {
+      margin-bottom: 0px;
+      min-height: 48px;
       min-width: 143px;
+      background-color: transparent;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      transform:
+        border var(--transition),
+        background-color var(--transition),
+        color var(--transition);
+      &.opened {
+        background-color: #fff;
+        border: 1px solid var(--neutral-color-150);
+        color: var(--neutral-color-150);
+      }
     }
   }
-
+  &__item.opened &__sublist {
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 20px;
+  }
+  &__item.opened &__item-title {
+    color: var(--neutral-color-60);
+  }
+  &__sublist {
+    @include mobile {
+      margin-left: 20px;
+      max-height: 0px;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        max-height var(--transition),
+        opacity var(--transition),
+        visibility var(--transition);
+    }
+  }
   &__subitem {
     &:not(:last-child) {
       margin-bottom: 16px;
