@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   padding: 87px 0 141px;
-
+  margin-top: 120px;
   @include mini-desktop {
     padding: 77px 0 121px;
   }
