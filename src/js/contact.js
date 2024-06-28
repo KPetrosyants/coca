@@ -8,6 +8,7 @@ import { useHeaderHiden } from './components/header-hiden.js';
 import { UsePartnersSlider } from './components/partnersSlider.js';
 import { UseAccord } from './components/accord.js';
 import { usePhone } from './components/contact/phone.js';
+import { useValidateForm } from './components/contact/useValidateForm.js';
 
 useTheme();
 useBurger();
@@ -16,3 +17,4 @@ useHeaderHiden();
 UsePartnersSlider();
 UseAccord();
 usePhone();
+useValidateForm();
