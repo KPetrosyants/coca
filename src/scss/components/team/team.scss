@@ -1,5 +1,5 @@
 .team {
-  padding: 220px 0 160px;
+  padding: 130px 0 160px;
   @include tablet {
     padding: 120px 0 160px;
   }
@@ -129,7 +129,9 @@
 }
 .slide {
   &--combination img {
-    display: none;
+    @include mobile {
+      display: none;
+    }
   }
   &__title h3 {
     font-weight: 600;
