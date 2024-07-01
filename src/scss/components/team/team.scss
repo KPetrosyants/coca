@@ -20,7 +20,7 @@
       align-items: flex-end;
       justify-content: center;
       flex-direction: column;
-      margin-bottom: 30px;
+      margin-bottom: 60px;
     }
   }
   &__descr {
@@ -69,6 +69,9 @@
       width: 59px;
       height: 59px;
       transform: translate(-39%, -50%);
+      & rect {
+        fill: var(--neutral-color-100);
+      }
     }
 
     &:hover .circle {
@@ -90,6 +93,9 @@
   margin-left: auto;
   @include small-tablet {
     margin-bottom: 100px;
+  }
+  @include mobile {
+    margin-bottom: 70px;
   }
 
   &__slide {
@@ -122,6 +128,9 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
+    & path {
+      stroke: var(--neutral-color-70);
+    }
     @include small-tablet {
       display: none;
     }
@@ -234,9 +243,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-  }
-
-  &__info {
   }
 
   &__name {
@@ -371,7 +377,7 @@
   font-weight: 500;
   font-size: 12px;
   letter-spacing: 0.08em;
-  fill: var(--neutral-color-90);
+  fill: var(--neutral-color-100);
   transition:
     transform var(--transition),
     animation-play-state var(--transition);
@@ -380,14 +386,14 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-fill-mode: both;
+  & path {
+    fill: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
-.circle path {
-  fill: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);

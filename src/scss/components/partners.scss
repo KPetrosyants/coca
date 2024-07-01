@@ -63,8 +63,8 @@
   }
 
   .swiper-slide {
-    // width: 160px;
-    // height: 90px;
+    width: 160px;
+    height: 90px;
     @include flex-all-center;
   }
 }

@@ -5,6 +5,7 @@ import 'swiper/css';
 export const UsePartnersSlider = () => {
   new Swiper('.partners-swiper', {
     modules: [Autoplay],
+    spaceBetween: 32,
     autoplay: {
       delay: 1000,
       disableOnInteraction: false,
