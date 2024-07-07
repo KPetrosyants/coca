@@ -79,15 +79,13 @@
   }
 
   &__slide {
-    max-width: 406px;
     @include tablet {
       max-width: none;
     }
-  }
-  &__slide--large {
-    max-width: 476px;
-    @include tablet {
-      max-width: none;
+    &.articles__slide--large {
+      @include tablet {
+        max-width: none;
+      }
     }
   }
 
