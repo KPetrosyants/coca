@@ -75,9 +75,6 @@
     }
   }
 
-  &__slider-wrapper {
-  }
-
   &__slide {
     @include tablet {
       max-width: none;
