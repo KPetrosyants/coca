@@ -1,0 +1,127 @@
+.articles {
+  overflow: hidden;
+  &__head {
+    margin-top: 160px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__text-block {
+    max-width: 435px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    font-weight: 500;
+    line-height: 1.77778;
+    color: var(--neutral-color-150);
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__slider-button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral-color-100);
+    &.swiper-button-disabled {
+      background-color: transparent;
+      border: 1px solid var(--neutral-color-40);
+      & path {
+        fill: var(--neutral-color-40);
+      }
+    }
+  }
+  &__slider-button-prev {
+    transform: rotate(180deg);
+  }
+
+  &__slider-container {
+    overflow: hidden;
+    @include tablet {
+      padding: 0 15px;
+    }
+  }
+  &__slider {
+    margin-bottom: 160px;
+    position: relative;
+    left: calc(
+      (100vw - (var(--container-width) + var(--container-padding) * 0)) / 2
+    );
+    @include tablet {
+      left: 0;
+    }
+  }
+
+  &__slider-wrapper {
+  }
+
+  &__slide {
+    max-width: 406px;
+    @include tablet {
+      max-width: none;
+    }
+  }
+  &__slide--large {
+    max-width: 476px;
+    @include tablet {
+      max-width: none;
+    }
+  }
+
+  &__slide-img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 24px;
+  }
+
+  &__slide-title {
+    font-weight: 600;
+    line-height: 1.3125;
+    letter-spacing: -0.03em;
+    color: var(--neutral-color-100);
+    margin-bottom: 16px;
+  }
+
+  &__slide-text {
+    margin-bottom: 24px;
+    font-weight: 500;
+    line-height: 1.77778;
+    color: var(--neutral-color-150);
+  }
+
+  &__slide-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 100px;
+    width: 175px;
+    height: 56px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--neutral-color-100);
+  }
+}
