@@ -1,3 +1,6 @@
+import placemarkImg from '/assets/icons/pin.svg';
+
+
 export const useWorldMap = () => {
   const center = [-23.54559598620423, 133.52839400009333];
   // Инициализация карты
@@ -28,8 +31,8 @@ export const useWorldMap = () => {
 			</div>`,
       },
       {
+        iconImageHref: {placemarkImg},
         iconLayout: 'default#image',
-        iconImageHref: './assets/icons/pin.svg',
         iconImageSize: [40, 40],
         iconImageOffset: [-19, -44],
       },

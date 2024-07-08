@@ -1,7 +1,7 @@
 .how {
   padding: 120px 15px 320px;
   background-color: var(--neutral-color-100);
-  @include small-desktop {
+  @include small-tablet {
     padding: 100px 15px 100px;
   }
   &__container {
