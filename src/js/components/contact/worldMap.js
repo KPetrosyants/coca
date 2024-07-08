@@ -31,7 +31,7 @@ export const useWorldMap = () => {
 			</div>`,
       },
       {
-        iconImageHref: {placemarkImg},
+        iconImageHref: placemarkImg,
         iconLayout: 'default#image',
         iconImageSize: [40, 40],
         iconImageOffset: [-19, -44],
