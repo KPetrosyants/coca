@@ -2,7 +2,8 @@ import placemarkImg from '/assets/icons/pin.svg';
 
 
 export const useWorldMap = () => {
-  const center = [-23.54559598620423, 133.52839400009333];
+  const dot1 = [-23.54559598620423, 133.52839400009333];
+  const dot2 = [55.75399399999374,37.62209300000001];
   // Инициализация карты
   function init() {
     let map = new ymaps.Map('world-map', {
@@ -19,8 +20,8 @@ export const useWorldMap = () => {
     map.controls.remove('rulerControl'); // удаляем контрол правил
     map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 
-    let placemark = new ymaps.Placemark(
-      center,
+    let placemark1 = new ymaps.Placemark(
+      dot1,
       {
         balloonContent: `<div class="balloon">
 				<div class="balloon__address">Yogja, INA</div>
@@ -37,7 +38,26 @@ export const useWorldMap = () => {
         iconImageOffset: [-19, -44],
       },
     );
-    map.geoObjects.add(placemark);
+
+    let placemark2 = new ymaps.Placemark(
+      dot2,
+      {
+        balloonContent: `<div class="balloon">
+				<div class="balloon__address">Russia, Moscow</div>
+				<div class="balloon__descr">
+                100 Lenina street </br>
+				</div>
+			</div>`,
+      },
+      {
+        iconImageHref: placemarkImg,
+        iconLayout: 'default#image',
+        iconImageSize: [40, 40],
+        iconImageOffset: [-19, -44],
+      },
+    );
+    map.geoObjects.add(placemark1);
+    map.geoObjects.add(placemark2);
 
     // placemark.balloon.open();
   }
